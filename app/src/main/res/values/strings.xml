@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">WuakiGourmet</string>
+    <string name="empty_parameters">Empty username/password</string>
+    <string name="request_exception">Request Exception!</string>
+    <string name="thread_exception">Thread exception!</string>
+    <string name="button_refresh">REFRESH</string>
+</resources>

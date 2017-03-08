@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        wuakigourmet {
+            keyAlias 'wuakigourmet'
+            keyPassword 'wuakigourmet'
+            storeFile file('C:/Users/albert.daurell/Feina/Android/wuakigourmet')
+            storePassword 'wuakigourmet'
+        }
+    }
+    compileSdkVersion 24
+    buildToolsVersion "23.0.3"
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        applicationId "tv.wuaki.wuakigourmet"
+        minSdkVersion 15
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        debug {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:24.0.0'
+    compile 'org.apache.httpcomponents:httpcore:4.4.1'
+    compile 'org.apache.httpcomponents:httpclient:4.5'
+}
